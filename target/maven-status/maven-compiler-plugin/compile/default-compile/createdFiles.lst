@@ -1,0 +1,10 @@
+pucp\tesis\msmqttclient\mqtt\MqttBeans.class
+pucp\tesis\msmqttclient\infraestructure\document\CO2.class
+pucp\tesis\msmqttclient\infraestructure\repository\CO2Repository.class
+pucp\tesis\msmqttclient\MsMqttclientApplication.class
+pucp\tesis\msmqttclient\infraestructure\document\Humidity.class
+pucp\tesis\msmqttclient\mqtt\MqttBeans$1.class
+pucp\tesis\msmqttclient\infraestructure\repository\RuidoRepository.class
+pucp\tesis\msmqttclient\infraestructure\repository\TemperatureRepository.class
+pucp\tesis\msmqttclient\infraestructure\document\Temperature.class
+pucp\tesis\msmqttclient\infraestructure\repository\HumidityRepository.class
