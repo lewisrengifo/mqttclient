@@ -84,10 +84,7 @@ public class MqttBeans {
         TimeZone timeZone = TimeZone.getTimeZone("GMT-5");
         timestampDate.setTimeZone(timeZone);
 
-        //auxiliar del date
-        Date horaMinSec = new Date();
-
-        String hora =    String.valueOf(timestampDate.get(Calendar.HOUR));
+        String hora = String.valueOf(timestampDate.get(Calendar.HOUR));
 
         String minutos = String.valueOf(timestampDate.get(Calendar.MINUTE));
 
@@ -116,8 +113,10 @@ public class MqttBeans {
 
           System.out.println("************ 2");
           String data = String.valueOf(message.getPayload());
+          humidity.setHour(hora);
+          humidity.setMinute(minutos);
+          humidity.setSecond(seconds);
           humidity.setHumiditySensed(data);
-          humidity.setTimestamp(horaMinSec.toString());
           humidityRepository.save(humidity).subscribe();
         } else if (topic.equals("sensor/co2")) {
           System.out.println("Tópico Elegido: " + topic);
@@ -125,8 +124,10 @@ public class MqttBeans {
 
           System.out.println("************ 3");
           String data = String.valueOf(message.getPayload());
+          co2.setHour(hora);
+          co2.setMinute(minutos);
+          co2.setSecond(seconds);
           co2.setCoSensed(data);
-          co2.setTimestamp(horaMinSec.toString());
           co2Repository.save(co2).subscribe();
         }
       }
