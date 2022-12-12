@@ -13,5 +13,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("co2")
 public class CO2 {
   private String coSensed;
-  private String timestamp;
+  private String hour;
+  private String minute;
+  private String second;
 }

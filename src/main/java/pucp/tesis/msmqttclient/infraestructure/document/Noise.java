@@ -8,11 +8,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@Document("humidity")
-public class Humidity {
-    private String humiditySensed;
+@AllArgsConstructor
+@Document("noiseSensed")
+public class Noise {
+    private String noiseSensed;
     private String hour;
     private String minute;
     private String second;
